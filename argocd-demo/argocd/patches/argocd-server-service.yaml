@@ -1,0 +1,22 @@
+# Change service type
+- op: add
+  path: /spec/type
+  value: NodePort
+
+# Add nodePort to http
+- op: add
+  path: /spec/ports/0/nodePort
+  value: 30000
+
+# Remove https
+- op: remove
+  path: /spec/ports/1
+
+# - op: replace
+#   path: /spec/ports
+#   value:
+#     - name: http
+#       port: 80
+#       protocol: TCP
+#       targetPort: 8080
+#       nodePort: 30000
