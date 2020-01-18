@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: argocd
 spec:
-  project: argocd
+  project: default
   source:
     repoURL: https://github.com/yukin01/kind-sandbox
     path: argocd-demo/argocd
