@@ -3,12 +3,12 @@ kind: Kustomization
 namespace: argocd
 
 bases:
-- github.com/argoproj/argo-cd/manifests/cluster-install?ref=v1.3.6
+- github.com/argoproj/argo-cd/manifests/cluster-install?ref=v1.4.0
 
 resources:
-- namespace.yaml
-- app-project.yaml
-- application.yaml
+- resources/namespace.yaml
+- resources/project.yaml
+- resources/application.yaml
 
 patchesJson6902:
 - target:

@@ -1,9 +1,12 @@
-.PHONY: build apply delete get-pod-name
+.PHONY: build clean apply delete get-pod-name
 
 build:
 	touch .output.yaml
 	mv -f .output.yaml .output.old.yaml
 	kustomize build . > .output.yaml
+
+clean:
+	rm -f .output.yaml .output.old.yaml
 
 apply:
 	kubectl apply -k .
