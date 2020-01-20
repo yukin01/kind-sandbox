@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd
+  name: project-manager
 spec:
-  project: argocd
+  project: default
   source:
     repoURL: https://github.com/yukin01/kind-sandbox
-    path: argocd-ha/argocd-manager/production
+    path: argocd-ha/project-manager/production
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: false
+      selfHeal: false
