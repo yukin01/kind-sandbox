@@ -3,10 +3,10 @@ kind: Application
 metadata:
   name: argocd
 spec:
-  project: argocd
+  project: default
   source:
     repoURL: https://github.com/yukin01/kind-sandbox
-    path: argocd-demo/argocd
+    path: argocd-demo
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc

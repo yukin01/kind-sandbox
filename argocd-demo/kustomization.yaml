@@ -7,7 +7,6 @@ bases:
 
 resources:
 - resources/namespace.yaml
-- resources/project.yaml
 - resources/application.yaml
 
 patchesJson6902:
