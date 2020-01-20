@@ -5,6 +5,9 @@ kind: Kustomization
 bases:
 - github.com/argoproj/argo-cd/manifests/ha/cluster-install?ref=v1.4.0
 
+resources:
+- namespace.yaml
+
 patchesJson6902:
 - target:
     version: v1
